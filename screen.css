@@ -66,13 +66,13 @@ form fieldset legend { background-color:white; margin-left:0.8em; padding:0 0.3e
 .clearer { clear:both }
 
 .insitu-footnote { background-color:#efefef; border:1px solid #7ABFCE;
-                   -moz-border-radius:0.3em; border-radius:0.3em; padding:0.5em }
+                   -moz-border-radius:0.25em; border-radius:0.3em; padding:0.5em }
 
 .medialeft { margin:0 1em 0.5em 0 }
 
 #messages > div { padding:0.5em 0.3em 0.3em 2em; margin:4px 155px; background-position:0.2em 50% }
 
-#content { margin:3em 3em 3em 135px }
+#content { margin:3em 3em 3em 135px; font-size:105% }
 #content .page > div { padding:0.2em 0 }
 #content .section_highlight,
 #content .secedit:hover { background-color:#fcefa1 }
@@ -126,19 +126,9 @@ form fieldset legend { background-color:white; margin-left:0.8em; padding:0 0.3e
 #mediamanager__page .upload .qq-upload-button { border:2px dashed #efefef; padding:0.5em; text-align:center }
 #mediamanager__page .file { width:30%; float:left }
 
-#sidebar { text-align:left; border-right:1px solid #ccc; width:120px; position:absolute; left:0; top:0;
-           color:#ccc!important; font-size:smaller; height:100%; padding-top:0.2em }
-#sidebar > * { color:#ccc!important; display:block; padding:0.5em 0.2em; border-bottom:1px solid #ccc }
-#sidebar:hover,
-#sidebar:hover input,
-#sidebar:hover > * { border-color:#666; color:#666!important; background-color:#efefef }
-#sidebar a:hover { text-decoration:none; color:blue; background-color:#ccc }
-#sidebar input { border:1px solid #ccc; background-color:white!important; width:95%; display:block;
-                 margin:0 0 0.2em auto; color:#ccc }
-#sidebar input[type=submit] { width:auto; color:#ccc }
-
 form#dw__search { text-align:right; margin:0.25em }
-#qsearch__out { right:1em; margin:0; border:1px solid #bbb; padding:0.4em; display:none }
+form#dw__search a.action { display:inline-block; margin-left:0.3em }
+#qsearch__out { right:3em; margin:0; border:1px solid #bbb; padding:0.4em; display:none }
 #qsearch__out strong { text-align:center; display:block }
 #qsearch__out ul { list-style-type:none }
 #qsearch__out ul a { display:block; padding:0.1em }
