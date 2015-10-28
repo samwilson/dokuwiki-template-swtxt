@@ -32,6 +32,7 @@ table.diff .diff-blockheader {  }
 table.diff .diff-lineheader { text-align:right }
 a { text-decoration:none }
 a.wikilink2 { color:red }
+a.interwiki { background-position:right center; padding:0 16px 0 0 }
 a:hover { text-decoration:underline }
 pre,
 table.diff { background-color:#dfdfef; border:0px solid #cdcdcd;
@@ -55,7 +56,7 @@ dd + dt { border:0; padding:0; margin-top:0.3em }
 dd { margin-left:10.6em }
 em { font-style:italic }
 strong { font-weight:bolder }
-p { margin:0.4em 0; line-height:1.1em }
+p, li { margin:0.4em 0; line-height:1.1em }
 blockquote { margin-left:1em; padding-left:1em; border-left:2px solid __border__ }
 code { font-family:monospace }
 form fieldset { border:2px groove #ccc }
@@ -128,6 +129,8 @@ form fieldset legend { background-color:white; margin-left:0.8em; padding:0 0.3e
 
 form#dw__search { text-align:right; margin:0.25em }
 form#dw__search a.action { display:inline-block; margin-left:0.3em }
+form#dw__search.searching #qsearch__in { background-image:url(../../images/throbber.gif);
+    background-position:right center; background-repeat:repeat-y }
 #qsearch__out { right:3em; margin:0; border:1px solid #bbb; padding:0.4em; display:none }
 #qsearch__out strong { text-align:center; display:block }
 #qsearch__out ul { list-style-type:none }
