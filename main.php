@@ -5,7 +5,6 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <!--link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Oldstyle" type="text/css"-->
         <title><?php tpl_pagetitle() ?> :: <?php echo strip_tags($conf['title']) ?></title>
         <?php tpl_metaheaders() ?>
     </head>
