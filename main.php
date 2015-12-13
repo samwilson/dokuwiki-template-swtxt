@@ -26,11 +26,17 @@
             </div><!-- #content -->
 
             <div id="searchbar">
-                <?php
-                tpl_action('login', 1, '');
-                tpl_searchform();
-                ?>
+
+                <?php tpl_searchform() ?>
+
+                <?php $loginAction = tpl_get_action('login') ?>
+                <a href="<?php echo wl($loginAction['id'], $loginAction['params']) ?>"
+                   class="action <?php echo $loginAction['type'] ?> loginout"
+                   title="<?php echo $lang['btn_'.$loginAction['type']] ?>">
+                    Ⓛ
+                </a>
             </div><!--#searchbar -->
+
 
             <?php if ($_SERVER['REMOTE_USER']): ?>
             <ul id="toolbar">

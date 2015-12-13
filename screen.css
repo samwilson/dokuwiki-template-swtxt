@@ -26,10 +26,12 @@ q:before, q:after {
 table { border-collapse:collapse; border-spacing:0; border:2px solid __text__; border-width:2px 0 }
 table th { border-bottom:1px solid __text__; vertical-align:bottom; padding:0.2em }
 table td { font-size:93%; padding:0.2em }
-table .diff-deletedline { background-color:#FF7373; color:#A60000; width:49% }
-table .diff-addedline { background-color:#67E667; color:#008500; width:49% }
+
+.dokuwiki.mode_diff #content { max-width:98% }
+table .diff-deletedline { background-color:#ecbe9c; color:#A60000; width:45% }
+table .diff-addedline { background-color:#c0f7b5; color:#008500; width:45% }
 table.diff .diff-blockheader {  }
-table.diff .diff-lineheader { text-align:right }
+table.diff td.diff-lineheader { text-align:right; width:4%; padding-right:3px }
 a { text-decoration:none }
 a.wikilink1 { color:blue }
 a.wikilink2 { color:red }
@@ -41,10 +43,17 @@ pre,
 table.diff { background-color:#dfdfef; border:0px solid #cdcdcd;
              font-family: "Andale Mono", AndaleMono, monospace; padding:0.2em;
              overflow:auto; font-size:78% }
+td.diffnav { background-color:white }
+a.diffbothprevrev,
+a.diffbothnextrev { font-weight:bolder; border:1px solid #bbb; display:inline-block; padding:2px; background-color:#efefef }
+a.diffbothprevrev:hover,
+a.diffbothnextrev:hover { text-decoration:none; background-color:white }
+td.diffnav form { display:inline }
+
 
 h1 { font-size:2.4em; text-align:center }
 h2 { font-size:1.9em; margin-top:0.4em; border-bottom:1px solid #ccc; padding:0.1em 0 }
-h3 { font-size:1.3em; margin-top:0.3em }
+h3 { font-size:1.3em; margin-top:0.3em; border-bottom:1px dashed #ddd; padding:0.1em 0 }
 h4 { font-size:1.15em; margin-top:0.1em; font-weight:bolder }
 h1 a,
 h2 a,
@@ -59,7 +68,15 @@ dd + dt { border:0; padding:0; margin-top:0.3em }
 dd { margin-left:10.6em }
 em { font-style:italic }
 strong { font-weight:bolder }
-p, ol, ul { margin:0.4em 0; line-height:1.4em }
+p, ol, ul { margin:1em 0; line-height:1.4em }
+div.dokuwiki ol { list-style-type:decimal }
+div.dokuwiki ol ol { list-style-type:upper-alpha }
+div.dokuwiki ol ol ol { list-style-type:lower-roman }
+div.dokuwiki ol ol ol ol { list-style-type:lower-greek }
+div.dokuwiki ul { list-style-type:square }
+div.dokuwiki ul ul { list-style-type:circle }
+div.dokuwiki ul ul ul { list-style-type:disc }
+div.dokuwiki ul ul ul ul { list-style-type:square }
 blockquote { margin-left:1em; padding-left:1em; border-left:2px solid __border__ }
 code { font-family:monospace }
 form fieldset { border:2px groove #ccc }
@@ -148,9 +165,22 @@ form#dw__search.searching #qsearch__in { background-image:url(../../images/throb
 #content #dw__toc li { line-height:0.9em }
 #content #dw__toc a:hover { text-decoration:none; color:green }
 
-form#dw__login fieldset { width:20em; margin:auto }
+form#dw__login fieldset { text-align:center; border:0 }
+form#dw__login fieldset legend { display:none }
+form#dw__login fieldset label { display:block; margin:0.5em }
 
-#toolbar { font-size:90%; margin:0; font-variant:small-caps; background: white }
+#toolbar { font-size:90%; margin:0; font-variant:small-caps; background:white; float:left }
 #toolbar li { display:inline-block; margin:0.4em 1em }
 #toolbar a { color:#343434 }
 #toolbar a:hover { text-decoration:none; color:green }
+
+a.loginout { font-variant:small-caps }
+a.loginout:hover { text-decoration:none }
+.loginout.logout { color:green }
+
+/**
+ * Tag plugin.
+ */
+div.dokuwiki div.tags { border-top:1px solid #ccc; margin-top:4em; margin-bottom:2em }
+div.dokuwiki div.tags a {  }
+div.dokuwiki div.tags span { background:0 }

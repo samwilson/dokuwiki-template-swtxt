@@ -4,5 +4,5 @@ jQuery(document).ready(function() {
     jQuery("body")
             .prepend(jQuery("form#dw__search"))
             .prepend(jQuery("ul#toolbar"));
-    jQuery("form#dw__search").append(jQuery("a.action.login,a.action.logout"));
+    jQuery("form#dw__search").append(jQuery("a.loginout"));
 });
