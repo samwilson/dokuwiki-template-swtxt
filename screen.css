@@ -24,6 +24,7 @@ q:before, q:after {
     content: '';
     content: none;
 }
+img { max-width:100% }
 table { border-collapse:collapse; border-spacing:0; border:2px solid __text__; border-width:2px 0 }
 table th { border-bottom:1px solid __text__; vertical-align:bottom; padding:0.2em }
 table td { font-size:93%; padding:0.2em }
