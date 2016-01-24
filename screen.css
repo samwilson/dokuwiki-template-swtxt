@@ -1,4 +1,3 @@
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b, u, i, center,
@@ -14,7 +13,9 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
-body { line-height:1; font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif; }
+html { font-size:medium }
+body { line-height:1.4; font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;
+    background-color:white; color:#224; margin:2rem auto; padding:0.2em; font-size:1rem }
 blockquote, q { quotes:none }
 blockquote:before, blockquote:after,
 sup { font-size:smaller; vertical-align:super; line-height:1 }
@@ -93,7 +94,7 @@ form fieldset legend { background-color:white; margin-left:0.8em; padding:0 0.3e
 
 #messages > div { padding:0.5em 0.3em 0.3em 2em; margin:4px 155px; background-position:0.2em 50% }
 
-#content { margin:3em auto; max-width:60em; font-size:105% }
+#content { margin:3em auto; max-width:50em }
 #content .page > div { padding:0.2em 0 }
 #content .section_highlight,
 #content .secedit:hover { background-color:#fcefa1 }
@@ -111,11 +112,14 @@ form fieldset legend { background-color:white; margin-left:0.8em; padding:0 0.3e
 #content .footnotes .fn sup { font-size:0.8em; vertical-align:baseline }
 #content .footnotes .fn { margin:0.25em 0 0 0 }
 
-.mode_edit textarea#wiki__text,
-.mode_preview textarea#wiki__text { width:95%; text-align:left; font-family:"Andale Mono", AndaleMono, monospace; padding:0.2em; line-height:1.2em }
+textarea#wiki__text { width:95%; text-align:left; font-family:"Andale Mono", AndaleMono, monospace;
+    padding:0.2em; line-height:1.2em; border:1px solid #bbc }
 #size__ctl { float:right }
 .mode_edit .editButtons,
 .mode_preview .editButtons { display:inline }
+
+ol#media-list { list-style-type:none; font-size:smaller }
+ol#media-list li { width:150px; margin:0.6em; display:inline-block; text-align:center }
 
 #media__manager h1 { display:none }
 #media__manager h1#media__ns { display:block; font-size:2em; border:0; text-align:left }
@@ -150,26 +154,27 @@ form fieldset legend { background-color:white; margin-left:0.8em; padding:0 0.3e
 form#dw__search { text-align:right; margin:0.25em }
 form#dw__search a.action { display:inline-block; margin-left:0.3em }
 form#dw__search.searching #qsearch__in { background-image:url(../../images/throbber.gif);
-    background-position:right center; background-repeat:repeat-y }
+                                         background-position:right center; background-repeat:repeat-y }
 #qsearch__out { right:3em; margin:0; border:1px solid #bbb; padding:0.4em; display:none }
 #qsearch__out strong { text-align:center; display:block }
 #qsearch__out ul { list-style-type:none }
 #qsearch__out ul a { display:block; padding:0.1em }
 
-#content #dw__toc { float:right; width:20%; background-color:white; border:1px solid #ccc; margin:0 0 1em 1em }
-#content #dw__toc ul { margin-left:0.7em; padding:0; font-size:10pt; list-style-type:none; color:#999 }
-#content #dw__toc ul ul { list-style-type:circle }
-#content #dw__toc ul ul ul { list-style-type:none }
-#content #dw__toc h3 { font-variant:small-caps; padding:0.2em 0.7em 0 0.7em; font-size:1em; text-align:center }
-#content #dw__toc h3 strong { display:none }
-#content #dw__toc li { line-height:0.9em }
-#content #dw__toc a:hover { text-decoration:none; color:green }
+#dw__toc { border:2px solid #ccc; border-width:medium 0; margin:1em 0; font-size:smaller }
+#dw__toc ul { list-style-type:none; margin:0; padding:0 }
+#dw__toc h3 { font-variant:small-caps; padding:0.2em 0.7em 0.5em 0.7em; font-size:1em; border-style:solid }
+#dw__toc h3.closed { border:0 }
+#dw__toc h3 strong { display:none }
+#dw__toc a { display:block; padding:0 0.2em }
+#dw__toc a:hover { text-decoration:none; background-color:#efefef }
+#dw__toc ul ul a { padding-left:1em }
+#dw__toc ul ul ul a { padding-left:2em }
 
 form#dw__login fieldset { text-align:center; border:0 }
 form#dw__login fieldset legend { display:none }
 form#dw__login fieldset label { display:block; margin:0.5em }
 
-#toolbar { font-size:90%; margin:0; font-variant:small-caps; background:white; float:left }
+#toolbar { font-size:90%; margin:0; font-variant:small-caps; float:left }
 #toolbar li { display:inline-block; margin:0.4em 1em }
 #toolbar a { color:#343434 }
 #toolbar a:hover { text-decoration:none; color:green }

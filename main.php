@@ -17,12 +17,31 @@
                 <div id="msgarea"><?php html_msgarea() ?></div>
             </header>
 
+            <?php tpl_toc() ?>
             <div id="content">
                 <?php
                 tpl_flush();
-                tpl_content();
+                tpl_content(false);
                 tpl_flush();
                 ?>
+
+                <?php if ($ACT=='edit' || $ACT=='preview'):
+                    $data = array();
+                    $mediaDir = $conf['mediadir'].'/'.str_replace(':', '/', $ID);
+                    search($data, $mediaDir, 'search_media', []);
+                    if (!empty($data)):
+                    ?>
+                    <h2>Page attachments:</h2>
+                    <ol id="media-list">
+                        <?php foreach ($data as $file): ?>
+                        <li>
+                            <img src="<?php echo ml($ID.':'.$file['id'], ['w'=>150]) ?>" />
+                            <?php echo $file['file'] ?>
+                        </li>
+                        <?php endforeach ?>
+                        </ol>
+                    <?php endif ?>
+                <?php endif ?>
             </div><!-- #content -->
 
             <div id="searchbar">
@@ -45,7 +64,6 @@
                 tpl_action('backlink', 1, 'li');
                 tpl_action('subscribe', 1, 'li');
                 tpl_action('recent', 1, 'li');
-                tpl_action('media', 1, 'li');
                 tpl_action('admin', 1, 'li');
                 tpl_action('index', 1, 'li');
                 tpl_action('history', 1, 'li');
