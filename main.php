@@ -25,15 +25,19 @@
                 tpl_flush();
                 ?>
 
-                <?php if ($ACT=='edit' || $ACT=='preview'):
+                <?php if ($ACT=='edit' || $ACT=='preview'): ?>
+                    <h3>Upload to <code><?php echo $ID ?></code>:</h3>
+                    <div id="swtxt__uploader"></div>
+
+                    <?php
                     tpl_include_page('meta:help');
                     $data = array();
                     $mediaDir = $conf['mediadir'].'/'.str_replace(':', '/', $ID);
                     search($data, $mediaDir, 'search_media', []);
-                    if (!empty($data)):
                     ?>
-                    <h2>Page attachments:</h2>
-                    <ol id="media-list">
+                    <?php if (!empty($data)): ?>
+                        <h3>Page attachments:</h3>
+                        <ol id="media-list">
                         <?php foreach ($data as $file): ?>
                         <li>
                             <img src="<?php echo ml($ID.':'.$file['id'], ['w'=>150]) ?>" />
@@ -42,6 +46,7 @@
                         <?php endforeach ?>
                         </ol>
                     <?php endif ?>
+
                 <?php endif ?>
             </div><!-- #content -->
 

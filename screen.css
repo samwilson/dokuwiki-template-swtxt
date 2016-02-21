@@ -4,10 +4,8 @@ small, strike, strong, sub, sup, tt, var, b, u, i, center,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
+    margin:0; padding:0; border: 0;
+    font-size:100%;
     font: inherit;
     vertical-align: baseline;
 }
@@ -20,13 +18,10 @@ blockquote, q { quotes:none }
 blockquote:before, blockquote:after,
 sup { font-size:smaller; vertical-align:super; line-height:1 }
 sub { font-size:smaller; vertical-align:sub; line-height:1 }
-q:before, q:after {
-    content: '';
-    content: none;
-}
+q:before, q:after { content:''; content:none }
 img { max-width:100% }
-table { border-collapse:collapse; border-spacing:0; border:2px solid __text__; border-width:2px 0 }
-table th { border-bottom:1px solid __text__; vertical-align:bottom; padding:0.2em }
+table { border-collapse:collapse; border-spacing:0; border:2px solid black; border-width:2px 0 }
+table th { border-bottom:1px solid black; vertical-align:bottom; padding:0.2em }
 table td { font-size:93%; padding:0.2em }
 
 .dokuwiki.mode_diff #content,
@@ -114,7 +109,9 @@ form fieldset legend { background-color:white; margin-left:0.8em; padding:0 0.3e
 #content .footnotes .fn sup { font-size:0.8em; vertical-align:baseline }
 #content .footnotes .fn { margin:0.25em 0 0 0 }
 
-textarea#wiki__text { width:95%; text-align:left; font-family:"Andale Mono", AndaleMono, monospace;
+#content .preview { background-color:#ffdfdf }
+
+textarea#wiki__text { width:100%; text-align:left; font-family:"Andale Mono", AndaleMono, monospace;
     padding:0.2em; line-height:1.2em; border:1px solid #bbc }
 #size__ctl { float:right }
 .mode_edit .editButtons,
@@ -133,6 +130,7 @@ ol#media-list li { width:150px; margin:0.6em; display:inline-block; text-align:c
 #media__manager #media__content .clearer {clear:none}
 #media__manager input[type="text"] { width:10em }
 #media__manager .qq-upload-name-input.edit { width:100% }
+.qq-upload-button { background-color:#dff4ff; padding:1em }
 
 #mediamanager__page ul { list-style-type:none }
 #mediamanager__page .namespaces { width:17%; float:left; padding-right:0.5em }
@@ -175,6 +173,7 @@ form#dw__search.searching #qsearch__in { background-image:url(../../images/throb
 form#dw__login fieldset { text-align:center; border:0 }
 form#dw__login fieldset legend { display:none }
 form#dw__login fieldset label { display:block; margin:0.5em }
+body.small-screen form#dw__login input { width:100% }
 
 #toolbar { font-size:90%; margin:0; font-variant:small-caps; float:left }
 #toolbar li { display:inline-block; margin:0.4em 1em }
