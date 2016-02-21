@@ -15,7 +15,7 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
 html { font-size:medium }
 body { line-height:1.4; font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;
-    background-color:white; color:#224; margin:2rem auto; padding:0.2em; font-size:1rem }
+    background-color:white; color:#224; margin:0 auto; padding:0.2em; font-size:1rem }
 blockquote, q { quotes:none }
 blockquote:before, blockquote:after,
 sup { font-size:smaller; vertical-align:super; line-height:1 }
@@ -29,7 +29,8 @@ table { border-collapse:collapse; border-spacing:0; border:2px solid __text__; b
 table th { border-bottom:1px solid __text__; vertical-align:bottom; padding:0.2em }
 table td { font-size:93%; padding:0.2em }
 
-.dokuwiki.mode_diff #content { max-width:98% }
+.dokuwiki.mode_diff #content,
+.dokuwiki.mode_admin #content { max-width:98% }
 table .diff-deletedline { background-color:#ecbe9c; color:#A60000; width:45% }
 table .diff-addedline { background-color:#c0f7b5; color:#008500; width:45% }
 table.diff .diff-blockheader {  }
@@ -80,7 +81,7 @@ div.dokuwiki ul ul { list-style-type:circle }
 div.dokuwiki ul ul ul { list-style-type:disc }
 div.dokuwiki ul ul ul ul { list-style-type:square }
 blockquote { margin-left:1em; padding-left:1em; border-left:2px solid __border__ }
-code { font-family:monospace }
+code { font-family:monospace; background-color:#efefef; padding:0.1em; border:1px solid #dfdfdf }
 form fieldset { border:2px groove #ccc }
 form fieldset legend { background-color:white; margin-left:0.8em; padding:0 0.3em; width:auto }
 

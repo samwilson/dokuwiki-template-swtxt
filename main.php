@@ -26,6 +26,7 @@
                 ?>
 
                 <?php if ($ACT=='edit' || $ACT=='preview'):
+                    tpl_include_page('meta:help');
                     $data = array();
                     $mediaDir = $conf['mediadir'].'/'.str_replace(':', '/', $ID);
                     search($data, $mediaDir, 'search_media', []);
